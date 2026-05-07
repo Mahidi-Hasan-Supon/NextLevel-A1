@@ -37,8 +37,8 @@ const user = {
     name: "John Doe", 
     age: 21
 }
+const showProperty = getProperty(user , 'name')
 
-// console.log(getProperty(user , 'name'));
 
 // problem 5
 interface Book{
