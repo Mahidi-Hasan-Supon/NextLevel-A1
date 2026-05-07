@@ -3,14 +3,14 @@ function filterEvenNumbers(numbers:number[]): number[]{
     return  numbers.filter((number)=>number % 2 === 0)
 }
 const result = filterEvenNumbers([1,2,3,4,5,6,])
-// console.log(result);
+
 
 //problem 2
 function reverseString(value:string):string{
     return value.split("").reverse().join("")
 }
 const result1 = reverseString('typescript')
-// console.log(result1);
+
 
 // problem 3
 type StringOrNumber = string | number
@@ -24,7 +24,7 @@ function checkType(value:StringOrNumber):string{
 }
 const result3 : StringOrNumber = checkType('hello')
 const result4 : StringOrNumber = checkType(12)
-// console.log(result3 , result4);
+
 
 // problem 4
 const getProperty = <T, K extends keyof T>(param1: T, param2: K) => {
@@ -50,12 +50,12 @@ interface Book{
 const myBook = { title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2024 };
 const toggleReadStatus =(book:Book)=>{
     return {
-        ...myBook , 
+        ...book , 
         isRead:true 
     }
 }
 const  toggleReadStatusSee= toggleReadStatus(myBook)
-console.log(toggleReadStatusSee);
+
 
 
 
@@ -81,7 +81,7 @@ class Student extends Person{
 }
 const student = new Student("Alice",20, "A");
 const getDetails = student.getDetails()
-console.log(getDetails);
+
 
 
 // problem 7 
@@ -91,5 +91,5 @@ const getIntersection  = (arr1:number[] , arr2 :number[]):number[] =>{
 }
 
 const valueSee = getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])
-console.log(valueSee);
+
 
